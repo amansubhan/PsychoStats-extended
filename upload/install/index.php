@@ -20,6 +20,15 @@
  *
  *	Version: $Id: index.php 442 2008-05-13 10:30:11Z lifo $
  */
+
+
+//Check if Psychostats is already installed
+if(file_exists('../config.php')) {
+        header("Location: ../");
+        die("Redirected...");
+}
+                
+
 define("PSYCHOSTATS_PAGE", true);
 define("PSYCHOSTATS_INSTALL_PAGE", true);
 require_once("./common.php");
