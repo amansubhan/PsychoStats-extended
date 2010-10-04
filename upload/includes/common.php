@@ -77,7 +77,11 @@ require_once(PS_ROOTDIR . "/includes/class_CMS.php");
 
 // load the basic config
 $dbtype = $dbhost = $dbport = $dbname = $dbuser = $dbpass = $dbtblprefix = '';
-require_once(PS_ROOTDIR . "/config.php");
+if(file_exists(PS_ROOTDIR . "/config.php")) require_once(PS_ROOTDIR . "/config.php");
+else {
+        header("Location: install/");
+        die("Redirected...");
+}
 
 // Initialize our global variables for PsychoStats. 
 // Lets be nice to the global Name Space.
