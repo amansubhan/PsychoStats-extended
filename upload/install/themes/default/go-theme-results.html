@@ -2,7 +2,7 @@
 {if $can_write}
 	<span class="good">The compile directory is writable!</span>
 {else}
-	<span class="bad">The compile directory is NOT writable!</span>
+	<span class="bad">The compile directory is NOT writable! Please set the correct CHMOD-Settings to the folder (e.g. via FTP)</span>
 {/if}
 </p>
 {foreach from=$errors item='e'}
